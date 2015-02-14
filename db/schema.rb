@@ -11,15 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150214001733) do
+ActiveRecord::Schema.define(version: 20150214024807) do
 
   create_table "codes", force: :cascade do |t|
-    t.string   "title",      limit: 255
-    t.string   "language",   limit: 255
-    t.text     "content",    limit: 65535
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.string   "title",       limit: 255
+    t.text     "content",     limit: 65535
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+    t.integer  "language_id", limit: 4
   end
+
+  add_index "codes", ["language_id"], name: "index_codes_on_language_id", using: :btree
 
   create_table "languages", force: :cascade do |t|
     t.string   "title",      limit: 255

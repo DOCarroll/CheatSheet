@@ -4,12 +4,16 @@ class CodesController < ApplicationController
   # GET /codes
   # GET /codes.json
   def index
-    @codes = Code.all
+    @languages = Language.all
   end
 
   # GET /codes/1
   # GET /codes/1.json
   def show
+  end
+
+  def group_by
+    @codes = Code.where(:language => params[:id])
   end
 
   # GET /codes/new
@@ -69,6 +73,6 @@ class CodesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def code_params
-      params.require(:code).permit(:title, :language, :content)
+      params.require(:code).permit(:title, :language_id, :content)
     end
 end
