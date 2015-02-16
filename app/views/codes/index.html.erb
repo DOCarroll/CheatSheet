@@ -1,16 +1,24 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Cheat Sheet</h1>
+
 
 <table>
+	<div class="header"><h1>Cheat Sheet</h1>
+<h3><%= link_to '+', new_code_path, {:class => 'button'} %></h3></div>
+
+<div class="nav">
   <tbody>
+  	<ul>
+  		
     <% @languages.each do |language| %>
-    <%= link_to language.title, {:action => 'group_by', :id=> language.id } %>
-  </br>
+    <li>
+    <%= link_to language.title, {:action => 'group_by', :id=> language.id} %>
+    </li>
     <% end %>
+
+</ul>
   </tbody>
+</div>
 </table>
 
 <br>
-
-<%= link_to 'New Code', new_code_path %>

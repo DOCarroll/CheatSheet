@@ -1,14 +1,18 @@
-<h1>Codes</h1>
+<div class="header"><h1>Code Sheet </h1>
+<h3><%= link_to '+', new_code_path, {:class => 'button'} %></h3>
+</div>
 <% @codes.each do |code| %>
+<div class="post">
       <tr>
+      	<td><%= link_to 'X ', code, method: :delete, data: { confirm: 'Are you sure?' } %></td><td><%= link_to ' Show', code %></td>|
+        <td><%= link_to 'Edit', edit_code_path(code) %></td></br>
+        <p>
         <td><strong>Title:</strong> <%= code.title %></td></br>
         <td><strong>Language:</strong> <%= code.language.title %></td></br>
         <td><strong>Content:</strong> <%= code.content %></td></br>
-        <td><%= link_to 'Show', code %></td>
-        <td><%= link_to 'Edit', edit_code_path(code) %></td>
-        <td><%= link_to 'Destroy', code, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </p>
       </tr>
+</div>
 <% end %>
 </br>
 <%= link_to 'Back', codes_path %>
-<%= link_to 'New Code', new_code_path %>

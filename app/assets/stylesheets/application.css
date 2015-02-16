@@ -14,5 +14,108 @@
  *= require_self
  */
 body {
-	background-color: red;
+	background-image: url('purple.jpg');
+}
+
+h1 {
+	color:white;
+	display:inline;
+}
+
+
+.header {
+	background-color: #68228B;
+	width:400px;
+	border-radius:5px 5px 0 0;
+	padding:10px;
+	font-size:15px;
+}
+
+h3 {
+	font-size: 40px;
+	display: inline;
+	margin-left:155px;
+}
+
+h3 a:hover {
+	background-color: transparent;
+	color:black;
+}
+
+.hover{
+	color:#68228B;
+}
+
+
+.button {
+	color:white;
+	clear:left;
+	margin:0 auto;
+}
+
+a:link {
+	text-decoration: none;
+	color:white;
+}
+a:visited {
+	color:white;
+}
+
+
+li {
+	text-decoration: none;
+	list-style-type: none;
+	display:inline;
+	background-color:black;
+	line-height:50px;
+	margin-left:6%;
+}
+
+ul {
+	padding:10px;
+	margin-top:0;
+	
+	width:400px;
+	background-color:black;
+	height:50px;
+
+}
+
+.post {
+	background-color: rgba(38,38,38,.5);
+	width:400px;
+	padding:10px;
+	border-top: 2px #261937 solid;
+}
+
+p {
+	color:#8c8d92;
+}
+
+input[type="submit"]{
+	background-color:#261937;
+	border:none;
+	color:white;
+	width:100px;
+}
+
+input[type="text"]{
+	width:40%;
+	clear:left;
+}
+field {
+	display:inline;
+}
+
+.nav {
+	margin-left:50%;
+}
+
+textarea {
+	width:100%;
+}
+
+
+strong {
+	color:#68228B;
 }

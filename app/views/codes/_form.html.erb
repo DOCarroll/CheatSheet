@@ -12,18 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br>
+    <strong><%= f.label :title %>:</strong><br/>
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :language_id %><br>
+    <strong><%= f.label :language_id %>:</strong><br />
     <%= f.text_field :language_id %>
   </div>
   <div class="field">
-    <%= f.label :content %><br>
+    <strong><%= f.label :content %>:</strong><br />
     <%= f.text_area :content %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit%>
   </div>
 <% end %>
